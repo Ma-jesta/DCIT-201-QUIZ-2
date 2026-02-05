@@ -1,0 +1,22 @@
+public class ClassAverage {
+
+    public double calculateClassAverage(double scoreOne, double scoreTwo) {
+        return (scoreOne + scoreTwo) / 2.0;
+    }
+
+    public double calculateClassAverage(double scoreOne, double scoreTwo, double scoreThree) {
+        return (scoreOne + scoreTwo + scoreThree) / 3.0;
+    }
+
+    public double calculateClassAverage(double[] scores) {
+        if (scores == null || scores.length == 0) {
+            return 0.0;
+        }
+
+        double sum = 0;
+        for (double s : scores) {
+            sum += s;
+        }
+        return sum / scores.length;
+    }
+}
